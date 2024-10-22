@@ -50,16 +50,12 @@ public class Cereal implements EsAlimento{
 
     @Override
     public int getCalorias() {
-        if(tipo == "espelta") {
-            return 5;
-        }
-        if(tipo == "maiz") {
-            return 8;
-        }if(tipo == "trigo") {
-            return 12;
-        }else {
-            return 15;
-        }
+        return switch (this.tipo) {
+            case "espelta" -> 5;
+            case "maiz" -> 8;
+            case "trigo" -> 12;
+            default -> 15;
+        };
     }
 
     @Override
