@@ -68,7 +68,7 @@ public class TrabajoPintura extends Servicio{
                 "\nCoste Mano de Obra.... " + costeManoObra() + "$" +
                 "\nCoste Adicional.... " + costeAdicional() + "$" +
                 "\n" +
-                "TOTAL: ............ "+ costeTotal() + "$" +
+                "TOTAL............ "+ costeTotal() + "$" +
                 "\n" +
                 "--------------------------------------";
     }
