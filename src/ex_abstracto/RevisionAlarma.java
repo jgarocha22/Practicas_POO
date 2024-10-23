@@ -40,7 +40,7 @@ public class RevisionAlarma extends Servicio{
                 "Fecha revisión: " + getFechaInicio() +
                 "\n" +
                 "----------------------------------------\n" +
-                "TOTAL....... " + costeManoObra()+
+                "TOTAL....... " + String.format("%.2f",costeManoObra()) + "$" +
                 "\n" +
                 "--------------------------------------";
     }

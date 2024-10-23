@@ -64,11 +64,11 @@ public class TrabajoPintura extends Servicio{
                 "\nFecha de inicio: " + getFechaInicio() +
                 "\n----------------------------------------\n" +
                 "Pintor: "+ getTrabajador() +
-                "\nCoste Material..... " + costeMaterial() + "$" +
-                "\nCoste Mano de Obra.... " + costeManoObra() + "$" +
-                "\nCoste Adicional.... " + costeAdicional() + "$" +
+                "\nCoste Material..... " + String.format("%.2f",costeMaterial()) + "$" +
+                "\nCoste Mano de Obra.... " + String.format("%.2f",costeManoObra()) + "$" +
+                "\nCoste Adicional.... " + String.format("%.2f",costeAdicional()) + "$" +
                 "\n" +
-                "TOTAL............ "+ costeTotal() + "$" +
+                "TOTAL............ "+ String.format("%.2f",costeTotal()) + "$" +
                 "\n" +
                 "--------------------------------------";
     }
