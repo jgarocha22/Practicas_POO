@@ -3,9 +3,9 @@ package ex_abstracto;
 import java.time.LocalDate;
 
 public abstract class Servicio {
-    private String trabajador;
+    private String trabajador = "";
     private LocalDate fechaInicio;
-    private String cliente;
+    private String cliente = "";
 
     public Servicio(String trabajador, LocalDate fechaInicio, String cliente) {
         this.trabajador = trabajador;

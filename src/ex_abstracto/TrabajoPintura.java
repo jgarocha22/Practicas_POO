@@ -3,8 +3,8 @@ package ex_abstracto;
 import java.time.LocalDate;
 
 public class TrabajoPintura extends Servicio{
-    private double superficie;
-    private double precioPintura;
+    private double superficie = 0;
+    private double precioPintura = 0;
 
     public TrabajoPintura(String trabajador, LocalDate fechaInicio, String cliente, double superficie, double precioPintura) {
         super(trabajador, fechaInicio, cliente);

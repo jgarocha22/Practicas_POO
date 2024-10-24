@@ -3,7 +3,7 @@ package ex_abstracto;
 import java.time.LocalDate;
 
 public class RevisionAlarma extends Servicio{
-    private double numeroAlarmas;
+    private double numeroAlarmas = 0;
 
     public RevisionAlarma(String trabajador, LocalDate fechaInicio, String cliente, double numeroAlarmas) {
         super(trabajador, fechaInicio, cliente);
