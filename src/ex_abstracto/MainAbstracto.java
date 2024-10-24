@@ -14,7 +14,7 @@ public class MainAbstracto {
         showArrayResult();
     }
 
-    public static void initializeServices() {
+    private static void initializeServices() {
         LocalDate fc = LocalDate.now();
         TrabajoPintura t1 = new TrabajoPintura("Pedro",fc,"Fermin",50,200);
         TrabajoPintura t2 = new TrabajoPintura("Joshua",fc,"Fercho",20,125);
@@ -24,7 +24,7 @@ public class MainAbstracto {
         servicios.add(a1);
     }
 
-    public static void showServicesDetails() {
+    private static void showServicesDetails() {
         for(Servicio s: servicios) {
             JOptionPane.showMessageDialog(null,s.detalleServicio(),"SERVICIO",JOptionPane.INFORMATION_MESSAGE);
         }
