@@ -1,0 +1,31 @@
+@startuml
+
+class Tablero
+class Usuario {
+  -id: Integer
+  -username: String
+  -email: String
+  -password: String
+  +getUsername(): String
+  +changePassword(): void
+}
+class Columna
+class Fila
+class Celda {
+  -numero: Integer
+}
+class Region
+class Sudoku
+
+Fila "1" o-- "9" Celda
+Columna "1" o-- "9" Celda
+Region "1" o-- "9" Celda
+
+Tablero "1" *-- "9" Fila
+Tablero "1" *-- "9" Columna
+Tablero "1" *-- "9" Region
+
+Tablero  -- Sudoku
+Sudoku -- Usuario
+
+@enduml
