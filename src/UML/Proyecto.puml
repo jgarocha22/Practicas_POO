@@ -1,0 +1,71 @@
+@startuml
+
+class Banco {
+    -LinkedList <Cliente> clientes
+    +getClientes(): LinkedList
+}
+
+class Usuario {
+    -String nombreUsuario
+    -String constraseña
+    -String direccion
+
+    +getNombreUsuario(): String
+    +getContraseña(): String
+    +getDireccion(): String
+}
+
+class Cliente {
+    -Cuenta cuenta
+
+    getNombreUsuario(): String
+    +getContraseña(): String
+    +getCuenta(): Cuenta
+    +depositar(double): void
+    +retirar(double): double
+    +saldoDisponible(): double
+    +cambiarContraseña(String): void
+    +validarContraseña(String): boolean
+    +cambiarDireccion(String): void
+    +resumenTransacciones(): void
+}
+
+class Administrador {
+    -Banco bancoAdministrador
+
+    +añadirUsuario(Usuario): void
+    +eliminarUsuario(String): void
+    +actualizarUsuario(String): void
+    getCuentas(): LinkedList
+    -buscarUsuario(String): Usuario
+}
+
+class Cuenta {
+    -double saldo
+    -LinkedList<Transaccion> transacciones
+
+    -registrarTransaccion(): void
+    +obtenerSaldo(): double
+    +depositarSaldo(double): void
+    retirarSaldo(double): void
+    +mostrarTransacciones(): void
+}
+
+class Transaccion {
+    -LocalDate fecha
+    -double monto
+
+    +mostrarTransaccion(): void
+}
+
+Banco "1" *-- "0*" Cliente
+Banco "1" *-- "1" Administrador
+
+Usuario -- Cliente
+Usuario -- Administrador
+
+Cliente "1" -- "1" Cuenta
+
+Cuenta "1*" *-- "0*" Transaccion
+
+@enduml
