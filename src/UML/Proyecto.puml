@@ -61,8 +61,8 @@ class Transaccion {
 Banco "1" *-- "0*" Cliente
 Banco "1" *-- "1" Administrador
 
-Usuario -- Cliente
-Usuario -- Administrador
+Usuario <|-- Cliente
+Usuario <|-- Administrador
 
 Cliente "1" -- "1" Cuenta
 
